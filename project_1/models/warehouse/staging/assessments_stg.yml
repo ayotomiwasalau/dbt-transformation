@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: assessments_stg
+    description: "information about assessments in module-presentations. Usually, every presentation has a number of assessments followed by the final exam."
+    columns:
+      - name: code_module
+        description: "An identification code for a module on which the student is registered."
+      
+      - name: code_presentation
+        description: "The identification code of the presentation during which the student is registered on the module."
+
+      - name: id_assessment
+        description: "Identification number of the assessment."
+        tests:
+          - unique
+
+      - name: assessment_type
+        description: "Type of assessment."
+
+      - name: date
+        description: "Information about the final submission date of the assessment calculated as the number of days since the start of the module-"
+
+      - name: weight
+        description: "Weight of the assessment in %"

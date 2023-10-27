@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: student_assessment_stg
+    description: "results of students' assessments"
+    columns:
+      - name: id_assessment
+        description: "The identification number of the assessment."
+        tests:
+          - not_null
+      
+      - name: id_student
+        description: "A unique identification number for the student."
+
+      - name: date_submitted
+        description: "The date of student submission, measured as the number of days since the start of the module presentation."
+
+      - name: is_banked
+        description: "A status flag indicating that the assessment result has been transferred from a previous presentation."
+
+      - name: score
+        description: "The student's score in this assessment. The range is from 0 to 100. The score lower than 40 is interpreted as Fail."

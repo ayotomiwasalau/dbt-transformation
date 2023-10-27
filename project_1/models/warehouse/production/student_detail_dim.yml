@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: student_detail_dim
+    description: "demographic information about the students."
+    columns:
+
+      - name: id_student
+        description: "A unique identification number for the student."
+        tests:
+          - not_null
+
+      - name: gender
+        description: "The student's gender."
+        tests:
+          - accepted_values:
+              values: ['M', 'F']
+
+      - name: region
+        description: "Identifies the geographic region, where the student lived while taking the module-presentation."
+
+      - name: highest_education
+        description: "Highest student education level on entry to the module presentation."
+
+      - name: imd_band
+        description: "Specifies the Index of Multiple Depravation band of the place where the student lived during the module-presentation."
+
+      - name: age_band
+        description: "Band of the student's age."
+
+      - name: disability
+        description: "Indicates whether the student has declared a disability."
+        

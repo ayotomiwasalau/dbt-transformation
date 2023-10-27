@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: courses_fact
+    description: "fact about courses taken by students"
+    columns:
+
+      - name: code_module
+        description: "An identification code for a module on which the student is registered."
+        tests:
+          - contains_only_integers
+          
+      - name: code_presentation
+        description: "The identification code of the presentation during which the student is registered on the module."
+
+      - name: module_presentation_length
+        description: "Length of the module-presentation in days"
+
+      - name: id_assessment
+        description: "Identification number of the assessment."
+
+      - name: assessment_type
+        description: "Type of assessment."
+      
+      - name: number_of_student
+        description: "The total number of students "
+
+      - name: max_assessment_score
+        description: "Maximum student's score in this assessment."
+
+      - name: min_assessment_score
+        description: "Minimum student's score in this assessment."

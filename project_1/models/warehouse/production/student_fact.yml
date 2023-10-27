@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: student_fact
+    description: "fact about students and related courses"
+    columns:
+
+      - name: id_student
+        description: "A unique identification number for the student."
+        tests:
+          - relationships:
+              to: ref('student_detail_dim')
+              field: id_student
+
+      - name: code_module
+        description: "An identification code for a module on which the student is registered."
+        tests:
+          - not_null
+      
+      - name: code_presentation
+        description: "The identification code of the presentation during which the student is registered on the module."
+
+
+      - name: num_of_prev_attempts
+        description: "The number times the student has attempted this module."
+
+      - name: studied_credits
+        description: "The total number of credits for the modules the student is currently studying."
+ 
+      - name: final_result
+        description: "Student's final result in the module-presentation"
+
+      - name: number_of_assessments_done
+        description: "Number of assessments done in the module"
+

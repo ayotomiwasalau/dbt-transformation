@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: student_info_stg
+    description: "demographic information about the students together with their results."
+    columns:
+      - name: code_module
+        description: "An identification code for a module on which the student is registered."
+        tests:
+          - not_null
+      
+      - name: code_presentation
+        description: "The identification code of the presentation during which the student is registered on the module."
+
+      - name: id_student
+        description: "A unique identification number for the student."
+
+      - name: gender
+        description: "The student's gender."
+
+      - name: region
+        description: "Identifies the geographic region, where the student lived while taking the module-presentation."
+
+      - name: highest_education
+        description: "Highest student education level on entry to the module presentation."
+
+      - name: imd_band
+        description: "Specifies the Index of Multiple Depravation band of the place where the student lived during the module-presentation."
+
+      - name: age_band
+        description: "Band of the student's age."
+
+      - name: num_of_prev_attempts
+        description: "The number times the student has attempted this module."
+
+      - name: studied_credits
+        description: "The total number of credits for the modules the student is currently studying."
+
+      - name: disability
+        description: "Indicates whether the student has declared a disability."
+        
+      - name: final_result
+        description: "Student's final result in the module-presentation"

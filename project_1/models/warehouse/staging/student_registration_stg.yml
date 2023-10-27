@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: student_registration_stg
+    description: "information about the time when the student registered for the module presentation. For students who unregistered the date of deregistration is also recorded."
+    columns:
+      - name: code_module
+        description: "An identification code for a module on which the student is registered."
+      
+      - name: code_presentation
+        description: "The identification code of the presentation during which the student is registered on the module."
+
+      - name: id_student
+        description: "A unique identification number for the student."
+
+      - name: date_registration
+        description: "The date of student’s registration on the module presentation, this is the number of days measured relative to the start of the module-presentation (e.g. the negative value -30 means that the student registered to module presentation 30 days before it started)."
+
+      - name: date_unregistration
+        description: "Date of student unregistration from the module presentation, this is the number of days measured relative to the start of the module-presentation. Students, who completed the course have this field empty. Students who unregistered have Withdrawal as the value of the final_result column in the studentInfo.csv file."

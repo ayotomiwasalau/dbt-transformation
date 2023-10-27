@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+
+  - name: raw
+    database: datadb
+    tables:
+      - name: assessments
+      - name: courses
+      - name: student_assessment
+      - name: student_info
+      - name: student_registration
+      - name: student_vle
+      - name: vle
+

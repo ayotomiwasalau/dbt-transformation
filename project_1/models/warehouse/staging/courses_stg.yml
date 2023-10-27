@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: courses_stg
+    description: "contains the list of all available modules (courses) and their presentations."
+    columns:
+      - name: code_module
+        description: "An identification code for a module on which the student is registered."
+        tests:
+          - not_null
+
+      - name: code_presentation
+        description: "The identification code of the presentation during which the student is registered on the module."
+
+      - name: module_presentation_length
+        description: "Length of the module-presentation in days"
